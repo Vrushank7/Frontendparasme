@@ -11,9 +11,50 @@ import lear from '../assets/learn.jpg';
 import ons from '../assets/onsite.jpg';
 import platf from '../assets/platform.jpg';
 import repo from '../assets/report.jpg';
+import bmani from '../assets/bmani.jpg';
+import preethi from '../assets/prever.jpg';
+import sachin from '../assets/sachver.jpg';
+import sheeth from '../assets/sheepre.jpg';
+import rishab from '../assets/rishabjain.jpg';
+
+
 
 function Home() {
   const [isHovered, setIsHovered] = useState(false);
+  const [openFAQs, setOpenFAQs] = useState({});
+  const toggleFAQ = (index) => {
+    setOpenFAQs((prevOpenFAQs) => ({
+      ...prevOpenFAQs,
+      [index]: !prevOpenFAQs[index],
+    }));
+  };
+
+  const faqs = [
+    {
+      question: 'What is Parasme?',
+      answer: 'Provides "Most Superior" solutions in automation of IT Infrastructure.',
+    },
+    {
+      question: "What's our vision?",
+      answer:
+        'Automate each and every administration operations in database, middleware & server leading to a state where administrators intervenes only in case of exceptions in the automated operation.',
+    },
+    {
+      question: 'How do we innovate IT Automation?',
+      answer:
+        'An approach of Learn-Build-Deploy leads us to meet each and every requirement of the client to be prepared for future in terms of saving time, effort & cost with predictable quality deliveries.',
+    },
+    {
+      question: 'What is the use case we solve for?',
+      answer:
+        'Enterprises impacted by longer operations time with unpredictable time and quality deliveries through manual methods or any other tool.<br />Expensive cost of tools/software with limited coverage of the operational executions.',
+    },
+    {
+      question: 'What industry does Parasme serve?',
+      answer: 'Every industry having deployment of database, middleware & servers are being covered in our product.',
+    },
+  ];
+
   return (
     <div className="home-page">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#fff9f6', color: '#fff', padding: '5rem 2rem', marginTop: '80px', marginBottom: '90px' }}>
@@ -158,7 +199,7 @@ function Home() {
 
 
 <div className="section_about-process">
-  <div className="padding-global" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', marginBottom: '70px' }}>
+  <div className="padding-global" style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', marginBottom: '180px' }}>
     <div className="container-large" style={{ width: '100%', maxWidth: '80rem', marginLeft: 'auto', marginRight: 'auto' }}>
       <div className="padding-bottom" style={{ paddingTop: '0', paddingLeft: '0', paddingRight: '0' }}>
         <div className="padding-xhuge" style={{ padding: '1.5rem' }}></div>
@@ -212,6 +253,156 @@ function Home() {
       </div>
     </div>
   </div>
+</div>
+
+      <div style={{ paddingTop: '0', paddingLeft: '0', paddingRight: '0', fontFamily: 'Arial, sans-serif', margin: '0', padding: '0', overflowX: 'hidden', marginBottom: '50px' }}>
+        <div style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem', marginBottom: '76px' }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <div style={{ gridAutoColumns: '1fr', gridColumnGap: '4rem', gridRowGap: '2rem', gridTemplateRows: 'auto', gridTemplateColumns: '.5fr 1fr', gridAutoFlow: 'row', display: 'grid', }}>
+              <div style={{ flexDirection: 'column' }}>
+                <h2 style={{ color: 'orangered', fontSize: '2rem', fontWeight: '600', lineHeight: '1.2', marginTop: '0' }}>Frequently Asked Questions</h2>
+                <div style={{ paddingTop: '0', paddingLeft: '0', paddingRight: '0', paddingBottom: '0.25rem', marginTop: '-0.90rem' }}></div>
+                <Link to="/contact" style={{ borderBottom: '1px solid blue', color: 'black', fontWeight: '600', textDecoration: 'none' }}>Contact us for more info
+                </Link>
+              </div>
+              <div style={{ marginTop: '-2rem' }}>
+                {faqs.map((faq, index) => (
+                  <div key={index}
+                    onClick={() => toggleFAQ(index)}
+                    style={{ cursor: 'pointer', backgroundColor: '#fff', borderBottom: '2px solid #ececf1', padding: '1rem 0', transition: 'background-color 0.3s' }}>
+                    <div style={{ display: 'flex' }}>
+                      <div style={{ justifyContent: 'flex-start', alignItems: 'center', width: '2rem', marginRight: '3rem', display: 'flex' }}>
+                        <div style={{ color: '#fa5c22', fontSize: '1.5rem', fontWeight: '600' }}>
+                          {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                        </div>
+                      </div>
+                      <div style={{ justifyContent: 'space-between', alignItems: 'center', width: '100%', display: 'flex' }}>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: '500', lineHeight: '1.4' }}>{faq.question}</h3>
+                        <div
+                          style={{ flex: 'none', justifyContent: 'center', alignItems: 'center', width: '3rem', height: '3rem', marginLeft: '2rem', display: 'flex', transition: 'background-color 0.3s', }}>
+                          <div style={{ fontSize: '2rem', color: '#282938b3', marginLeft: '0.5rem', transition: 'transform 0.3s ease', transformOrigin: 'center', transform: openFAQs[index] ? 'rotate(90deg)' : 'rotate(0deg)', }}>{openFAQs[index] ? '×' : '+'}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {openFAQs[index] && (
+                      <div style={{ maxWidth: '40rem', overflow: 'hidden', marginTop: '-1.90rem' }}>
+                        <div style={{ marginLeft: '5rem', fontSize: '1.10rem', lineHeight: '1.2rem' }}>
+                          <p style={{ color: '#282938b3', fontFamily: 'Poppins, sans-serif' }} dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+  
+
+<div style={{ position: 'relative', width: '100%', margin: '0 auto',marginBottom: '40px', marginTop: '160px'  }}>
+<h2 style={{ fontWeight: '600', marginBottom: '29px', marginTop: '0', color: 'orangered', fontSize: '45px', paddingLeft: '270px', paddingRight: '270px' }}>Meet our team</h2>
+
+
+<div style={{ display: 'flex', animation: 'slide 34s linear infinite', paddingLeft: '0', whiteSpace: 'nowrap' }}>
+  
+ 
+  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <img src={bmani} alt="B. Mani" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
+    </div>
+    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>B. Mani</div>
+    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Managing Director</div>
+  </div>
+
+  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <img src={sachin} alt="Sachin Verma" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
+    </div>
+    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Sachin Verma</div>
+    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Chief Product Officer</div>
+  </div>
+
+  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <img src={preethi} alt="Preeti Verma" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
+    </div>
+    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Preeti Verma</div>
+    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Sr. Manager - Operations</div>
+  </div>
+
+  
+  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <img src={sheeth} alt="Sheetal Panigrahi" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
+    </div>
+    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Sheetal Panigrahi</div>
+    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Sr. Manager - Database</div>
+  </div>
+  
+  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '170px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <img src={rishab} alt="Rishab Jain" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
+    </div>
+    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Rishab Jain</div>
+    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Manager - Application</div>
+  </div>
+
+  
+  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <img src={bmani} alt="B. Mani" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
+    </div>
+    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>B. Mani</div>
+    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Managing Director</div>
+  </div>
+
+  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <img src={sachin} alt="Sachin Verma" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
+    </div>
+    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Sachin Verma</div>
+    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Chief Product Officer</div>
+  </div>
+
+  <div style={{ backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <img src={preethi} alt="Preeti Verma" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
+    </div>
+    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Preeti Verma</div>
+    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Sr. Manager - Operations</div>
+  </div>
+
+  
+  <div style={{ backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <img src={sheeth} alt="Sheetal Panigrahi" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
+    </div>
+    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Sheetal Panigrahi</div>
+    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Sr. Manager - Database</div>
+  </div>
+
+  <div style={{ backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      <img src={rishab} alt="Rishab Jain" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
+    </div>
+    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Rishab Jain</div>
+    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Manager - Application</div>
+  </div>
+
+
+
+</div>
+  
+</div>
+
+<style>{`
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-106%); } 
+  }
+    
+`}</style>
 </div>
 
 
