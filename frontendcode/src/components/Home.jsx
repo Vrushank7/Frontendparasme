@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import fogo from '../assets/paras.jpg';
 import ser from '../assets/server.jpg';
 import data from '../assets/database.jpg';
@@ -16,11 +16,20 @@ import preethi from '../assets/prever.jpg';
 import sachin from '../assets/sachver.jpg';
 import sheeth from '../assets/sheepre.jpg';
 import rishab from '../assets/rishabjain.jpg';
+import contact from '../assets/contac.jpg';
 
 
 
 function Home() {
   const [isHovered, setIsHovered] = useState(false);
+  const contactRef = useRef(null);
+
+  const handleScrollToContact = () => {
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const [openFAQs, setOpenFAQs] = useState({});
   const toggleFAQ = (index) => {
     setOpenFAQs((prevOpenFAQs) => ({
@@ -64,7 +73,7 @@ function Home() {
     <p style={{ fontSize: '1rem', color: 'black', marginBottom: '2rem', maxWidth: '25rem', lineHeight: '1.6' }}>
       We offer software product automating IT infrastructure administration procedures. Our solution reduces manual intervention in complex repeatable processes with reliable and predictable deliveries, consistently meeting the evolving demands of modern businesses.
     </p>
-    <Link to="/book-demo" style={{ backgroundColor: '#ff5722', color: 'white', padding: '1rem 2rem', borderRadius: '5px', textDecoration: 'none', fontSize: '1rem', transition: 'background-color 0.3s ease' }}>Book A Demo</Link>
+    <a href="https://cal.com/parasme/30min?date=2024-07-12&month=2024-07" style={{ backgroundColor: '#ff5722', color: 'white', padding: '1rem 2rem', borderRadius: '5px', textDecoration: 'none', fontSize: '1rem', transition: 'background-color 0.3s ease' }}>Book A Demo</a>
   </div>
   <div style={{ maxWidth: '40%' }}>
     <img src={fogo} alt="Parasme Illustration" style={{ width: '100%', borderRadius: '10px' }} />
@@ -77,14 +86,16 @@ function Home() {
     <p style={{ fontSize: '18px', color: '#666', maxWidth: '400px' }}>
       Automate any administration procedure, no matter how complex. Our software is platform-independent with in-built functionality to fix known issues during execution, ensuring quality deliveries consistently.
     </p>
-    <Link to="/contact" 
+    <Link 
             style={{ fontSize: '18px', color: '#FF6347', textDecoration: 'none', marginTop: '20px', display: 'inline-flex', alignItems: 'center', transition: 'color 0.3s ease' }} 
             onMouseEnter={() => setIsHovered(true)} 
-            onMouseLeave={() => setIsHovered(false)}> Get in touch with us<span style={{ 
+            onMouseLeave={() => setIsHovered(false)}
+            onClick={handleScrollToContact}> Get in touch with us<span style={{ 
                 marginLeft: '5px', 
                 transition: 'transform 0.3s ease', 
                 display: 'inline-block', 
-                transform: isHovered ? 'translateX(5px)' : 'translateX(0)' 
+                transform: isHovered ? 'translateX(5px)' : 'translateX(0)' ,
+                fontSize: '1.9rem' 
               }}> →</span></Link> </div>
 
   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: 'auto auto', gridGap: '10px', justifyItems: 'start' }}>
@@ -262,7 +273,7 @@ function Home() {
               <div style={{ flexDirection: 'column' }}>
                 <h2 style={{ color: 'orangered', fontSize: '2rem', fontWeight: '600', lineHeight: '1.2', marginTop: '0' }}>Frequently Asked Questions</h2>
                 <div style={{ paddingTop: '0', paddingLeft: '0', paddingRight: '0', paddingBottom: '0.25rem', marginTop: '-0.90rem' }}></div>
-                <Link to="/contact" style={{ borderBottom: '1px solid blue', color: 'black', fontWeight: '600', textDecoration: 'none' }}>Contact us for more info
+                <Link  style={{ borderBottom: '1px solid blue', color: 'black', fontWeight: '600', textDecoration: 'none' }}onClick={handleScrollToContact}>Contact us for more info
                 </Link>
               </div>
               <div style={{ marginTop: '-2rem' }}>
@@ -300,7 +311,7 @@ function Home() {
         </div>
   
 
-<div style={{ position: 'relative', width: '100%', margin: '0 auto',marginBottom: '40px', marginTop: '160px'  }}>
+<div style={{ position: 'relative', width: '100%', margin: '0 auto',marginBottom: '90px', marginTop: '160px'  }}>
 <h2 style={{ fontWeight: '600', marginBottom: '29px', marginTop: '0', color: 'orangered', fontSize: '45px', paddingLeft: '270px', paddingRight: '270px' }}>Meet our team</h2>
 
 
@@ -404,6 +415,68 @@ function Home() {
     
 `}</style>
 </div>
+
+
+<div ref={contactRef} style={{ backgroundColor: '#fff9f6', padding: '92px 5% 0px 5%', position: 'relative',marginBottom:"90px"}}>
+  <div style={{ width: '100%', maxWidth: '1140px', marginLeft: 'auto', marginRight: 'auto', position: 'relative' }}>
+    <div style={{ display: 'grid',gridRowGap: '90px',gridColumnGap: '90px',gridTemplateRows: 'auto',gridTemplateColumns: '.75fr 1fr',alignItems: 'start' }}>
+      <div>
+        <div style={{ marginBottom: '48px' }}>
+          <div style={{ marginBottom: '16px' }}>
+            <h1 style={{ color: 'orangered', letterSpacing: '-.02em', marginTop: '0', marginBottom: '0', fontSize: '48px', lineHeight: '1.2' }}>Contact Us</h1></div>
+          <p style={{ letterSpacing: '-.02em', marginBottom: '0', fontSize: '20px', lineHeight: '32px', color: '#666' }}>Please share your details and we will reach out!</p>
+        </div>
+        <div style={{ margin: '0 0 15px' }}><form id="wf-form-Contact-Form-3" name="wf-form-Contact-Form-3"  method="get" style={{ display: 'flex', flexDirection: 'column' }}
+            onSubmit={(e) => {
+              e.preventDefault();
+              document.getElementById('form-success-message').style.display = 'none'; 
+              document.getElementById('form-error-message').style.display = 'none'; 
+              const submitButton = e.target.querySelector('input[type="submit"]');
+              submitButton.value = 'Please wait...'; 
+              submitButton.disabled = true; 
+              let isNetworkAvailable = navigator.onLine; 
+              setTimeout(() => {
+                if (!isNetworkAvailable) {
+                  submitButton.value = 'Submit';
+                  submitButton.disabled = false; 
+                  document.getElementById('form-error-message').style.display = 'block';
+                } else {
+                  document.getElementById('form-success-message').style.display = 'block'; 
+                  document.getElementById('wf-form-Contact-Form-3').style.display = 'none'; 
+                }}, 2000); }}>
+            <div style={{ marginBottom: '0px' }}>
+              <label htmlFor="Contact-Name-Field-02" style={{ color: 'black', letterSpacing: '-.01em', marginBottom: '8px', fontSize: '14px', fontWeight: '400', lineHeight: '24px' }}>Name</label>
+              <input style={{ borderRadius: '8px',padding: '11px 16px',transition: 'all .2s',color: '#333',backgroundColor: '#fff',border: '1px solid #ccc',width: '92%',height: '24px',marginBottom: '19px',marginTop: '10px',fontSize: '14px',lineHeight: '1.42857',display: 'block'}}type="text" id="Contact-Name-Field-02"required/>
+            </div>
+            <div style={{ marginBottom: '0px' }}>
+              <label htmlFor="Contact-Email-Field-02" style={{ color: 'black', letterSpacing: '-.01em', marginBottom: '8px', fontSize: '14px', fontWeight: '400', lineHeight: '24px' }}>Email Address</label>
+              <input className="f-field-input w-input" style={{ borderRadius: '8px',padding: '11px 16px',transition: 'all .2s',color: '#333',backgroundColor: '#fff',border: '1px solid #ccc',width: '92%',height: '24px',marginBottom: '19px',marginTop: '10px',fontSize: '14px',lineHeight: '1.42857',display: 'block',}}type="email" id="Contact-Email-Field-02" required/>
+            </div>
+            <div style={{ marginBottom: '16px' }}>
+              <label htmlFor="Contact-Message-Field-02" style={{ color: 'black', letterSpacing: '-.01em', marginBottom: '8px', fontSize: '14px', fontWeight: '400', lineHeight: '24px' }}>Message</label>
+              <textarea id="Contact-Message-Field-02" name="Contact-Message-Field-02" style={{ border: '1px solid #ccc',color: '#333',backgroundColor: '#fff',borderRadius: '8px',minHeight: '90px',marginBottom: '2px',padding: '16px',fontSize: '14px',lineHeight: '24px',width: '92%',height: 'auto',display: 'block',marginTop: '10px',transition: 'all 0.2s' }}required/></div>
+            <input type="submit" value="Submit" style={{ backgroundColor: 'orangered',color: 'white',textAlign: 'center',letterSpacing: '-.02em',borderRadius: '50px',justifyContent: 'center',alignItems: 'center',minHeight: '48px',padding: '12px 24px',fontSize: '14px',fontWeight: '500',textDecoration: 'none',transition: 'background-color .3s',display: 'block',cursor: 'pointer',lineHeight: 'inherit',border: '0',}}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = 'black';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = 'orangered';
+              }}/>
+          </form>
+          <div id="form-success-message" style={{ textAlign: 'center',backgroundColor: '#ddd',padding: '20px',display: 'none'}}>
+            Thank you! Your submission has been received!
+          </div>
+          <div id="form-error-message" style={{ backgroundColor: '#ffdede',marginTop: '10px',padding: '10px',display: 'none',color: 'black',borderRadius: '8px',textAlign: 'center'}}>Oops! Something went wrong while submitting the form.
+          </div>
+        </div>
+      </div>
+      <div style={{ maxWidth: '550px', height: '100%' }}>
+        <img src={contact} alt="Contact us" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 

@@ -195,7 +195,7 @@ function Navbar() {
             )}
           </li>
         </ul>
-        <Link to="/book-demo" style={{
+        <a href="https://cal.com/parasme/30min?date=2024-07-12&month=2024-07" style={{
           backgroundColor: 'orangered',
           color: 'white',
           padding: '0.5rem 1rem',
@@ -208,7 +208,7 @@ function Navbar() {
           fontSize: '1.1rem'
         }}>
           Book A Demo
-        </Link>
+        </a>
       </nav>
     </div>
   );
