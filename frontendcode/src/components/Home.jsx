@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState,useRef } from 'react';
 import fogo from '../assets/paras.jpg';
+import logo from '../assets/parasmelogo.jpg'; 
 import ser from '../assets/server.jpg';
 import data from '../assets/database.jpg';
 import midd from '../assets/middlewear.jpg';
@@ -23,10 +24,17 @@ import contact from '../assets/contac.jpg';
 function Home() {
   const [isHovered, setIsHovered] = useState(false);
   const contactRef = useRef(null);
+  const AboutRef = useRef(null);
 
   const handleScrollToContact = () => {
     if (contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const ScrollToContact = () => {
+    if (AboutRef.current) {
+      AboutRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -311,7 +319,7 @@ function Home() {
         </div>
   
 
-<div style={{ position: 'relative', width: '100%', margin: '0 auto',marginBottom: '90px', marginTop: '160px'  }}>
+<div ref={AboutRef} style={{ position: 'relative', width: '100%', margin: '0 auto',marginBottom: '90px', marginTop: '160px'  }}>
 <h2 style={{ fontWeight: '600', marginBottom: '29px', marginTop: '0', color: 'orangered', fontSize: '45px', paddingLeft: '270px', paddingRight: '270px' }}>Meet our team</h2>
 
 
@@ -478,8 +486,41 @@ function Home() {
 </div>
 
 
-
-
+<div style={{ backgroundColor: 'white', padding: '4rem', margin: '0' }}>
+        <footer style={{ backgroundColor: 'white', margin: '0', padding: '0' }}>
+          <div style={{ paddingBottom: '0rem', fontSize: '1rem', padding: '0', paddingTop: '0', paddingLeft: '0', paddingRight: '0' }}>
+            <div style={{ backgroundColor: 'white', paddingTop: '0px', paddingBottom: '0px' }}>
+              <div style={{ maxWidth: '1352px', paddingLeft: '24px', paddingRight: '24px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', maxWidth: '350px', gridRowGap: '32px' }}>
+                    <a href="/" style={{ height: '60px', display: 'inline-block', textDecoration: 'none' }}>
+                      <img src={logo} alt="" style={{ height: '100%' }} />
+                      <div style={{ fontWeight: 700, fontSize: '1.0rem', color: 'black' }}>Parasme IT Solutions Pvt. Ltd.</div>
+                      <div style={{ fontWeight: 400, fontSize: '1.0rem', color: 'black' }}>Regd Off: Bengaluru</div>
+                      <div style={{ fontWeight: 400, fontSize: '1.0rem', color: 'black' }}>Karnataka, INDIA</div></a></div>
+                  <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start', gridColumnGap: '120px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gridRowGap: '24px' }}>
+                      <div style={{ fontSize: '18px', fontWeight: 700, lineHeight: '130%' }}>About Us</div>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gridRowGap: '16px' }}>
+                        <a href="#about-us" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }} onClick={ScrollToContact}>Our Team</a>
+                        <a href="#contact-us" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }} onClick={handleScrollToContact}>Contact Us</a>
+                        <a href="https://cal.com/parasme/30min?date=2024-07-12&month=2024-07" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }}>Link</a></div></div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gridRowGap: '24px' }}>
+                      <div style={{ fontSize: '18px', fontWeight: 700, lineHeight: '130%' }}>Product</div>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gridRowGap: '16px' }}>
+                        <Link to="/products/database" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }}>Database</Link>
+                        <Link to="/products/middleware" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }}>Middleware</Link>
+                        <Link to="/products/server" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }}>Server</Link></div></div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gridRowGap: '24px' }}>
+                      <div style={{ fontSize: '18px', fontWeight: 700, lineHeight: '130%' }}>Solutions</div>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gridRowGap: '16px' }}>
+                        <Link to="/solutions/automation" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }}>Automation</Link>
+                        <Link to="/solutions/solution-engineering" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }}>Solution Engineering</Link></div></div></div></div>
+                <div style={{ backgroundColor: '#13131333', width: '100%', height: '1px', marginTop: '64px', marginBottom: '32px' }}></div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div style={{ fontSize: '14px', lineHeight: '130%' }}>Copyright @ Parasme IT Solutions Pvt. Ltd. 2024</div></div></div></div></div>
+        </footer>
+      </div>
     </div>
   );
 }

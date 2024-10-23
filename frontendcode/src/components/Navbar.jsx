@@ -5,20 +5,16 @@ import { useState, useEffect, useRef } from 'react';
 function Navbar() {
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
   const [showSolutionsDropdown, setShowSolutionsDropdown] = useState(false);
-
   const productsRef = useRef(null);
   const solutionsRef = useRef(null);
-
   const toggleProductsDropdown = () => {
     setShowProductsDropdown(true);
-    setShowSolutionsDropdown(false); // Close Solutions dropdown
+    setShowSolutionsDropdown(false); 
   };
-
   const toggleSolutionsDropdown = () => {
     setShowSolutionsDropdown(true);
-    setShowProductsDropdown(false); // Close Products dropdown
+    setShowProductsDropdown(false); 
   };
-
   const handleClickOutside = (event) => {
     if (
       productsRef.current && !productsRef.current.contains(event.target) &&
@@ -28,14 +24,12 @@ function Navbar() {
       setShowSolutionsDropdown(false);
     }
   };
-
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-
   return (
     <div style={{
       position: 'fixed',
@@ -109,7 +103,7 @@ function Navbar() {
                 zIndex: 1,
                 listStyleType: 'none',
                 margin: 0,
-                marginTop: '10px' // Adds space between dropdown and button
+                marginTop: '10px' 
               }}>
                 <li style={{ padding: '0.5rem 0', whiteSpace: 'nowrap' }}>
                   <NavLink
@@ -164,7 +158,7 @@ function Navbar() {
                 zIndex: 1,
                 listStyleType: 'none',
                 margin: 0,
-                marginTop: '10px' // Adds space between dropdown and button
+                marginTop: '10px' 
               }}>
                 <li style={{ padding: '0.5rem 0', whiteSpace: 'nowrap' }}>
                   <NavLink

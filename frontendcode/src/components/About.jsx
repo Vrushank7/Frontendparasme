@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 import bmani from '../assets/bmani.jpg';
 import preethi from '../assets/prever.jpg';
 import sachin from '../assets/sachver.jpg';
@@ -7,7 +8,7 @@ import rishab from '../assets/rishabjain.jpg';
 
 function About() {
   return (
-    <div style={{paddingTop: '0',paddingLeft: '0',paddingRight: '0',fontFamily: 'Arial, sans-serif',margin: '0',padding: '0',overflowX: 'hidden',marginBottom: '50px'}}>
+    <div style={{paddingTop: '0',paddingLeft: '0',paddingRight: '0',fontFamily: 'Arial, sans-serif',margin: '0',padding: '0',overflowX: 'hidden',marginBottom: '0px'}}>
     <header style={{ marginTop: '5rem' }}>
     <div style={{ paddingBottom: '8rem',paddingTop: '0', paddingLeft: '0', paddingRight: '0',gridAutoColumns: '1fr' }}></div>
     <div style={{ marginBottom: '76px', paddingLeft: '2.5rem', paddingRight: '2.5rem' }}>
@@ -125,8 +126,10 @@ function About() {
 
 
 </div>
+
   
 </div>
+
 
 <style>{`
   @keyframes slide {
@@ -135,7 +138,10 @@ function About() {
   }
     
 `}</style>
+<Footer />
+
 </div>
+
 
 
   );
