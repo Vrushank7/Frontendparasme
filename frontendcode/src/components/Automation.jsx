@@ -95,7 +95,7 @@ function Automation() {
               <div style={{ marginBottom: "8px" }}>
                 <div style={{ color: "black", textAlign: "center", fontSize: "24px", fontWeight: "700", lineHeight: "32px", letterSpacing: "-0.02em" }}>Troubleshooting</div>
               </div>
-              <p style={{ textAlign: "center", fontSize: "14px", lineHeight: "1.8", letterSpacing: "-0.01em", color: "#666", marginBottom: "0" }}>Database Crashing<br />High Wait Event<br />Session Blocking<br />Server Utilization Threshold Breach</p>
+              <p style={{ textAlign: "center", fontSize: "14px", lineHeight: "1.8", letterSpacing: "-0.01em", color: "#666" }}>Incident Monitoring<br />Diagnose<br />Recommend<br />Implement<br />Review & Repeat</p>
             </div>
           </div>
         </div>
