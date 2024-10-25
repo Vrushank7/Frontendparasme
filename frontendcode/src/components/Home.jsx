@@ -504,7 +504,7 @@ function Home() {
                       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gridRowGap: '16px' }}>
                         <a href="#about-us" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }} onClick={ScrollToContact}>Our Team</a>
                         <a href="#contact-us" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }} onClick={handleScrollToContact}>Contact Us</a>
-                        <a href="https://cal.com/parasme/30min?date=2024-07-12&month=2024-07" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }}>Link</a></div></div>
+                       </div></div>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gridRowGap: '24px' }}>
                       <div style={{ fontSize: '18px', fontWeight: 700, lineHeight: '130%' }}>Product</div>
                       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gridRowGap: '16px' }}>
@@ -518,7 +518,7 @@ function Home() {
                         <Link to="/solutions/solution-engineering" style={{ textDecoration: 'none', color: "#333", fontSize: "17px", fontWeight: "450" }}>Solution Engineering</Link></div></div></div></div>
                 <div style={{ backgroundColor: '#13131333', width: '100%', height: '1px', marginTop: '64px', marginBottom: '32px' }}></div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div style={{ fontSize: '14px', lineHeight: '130%' }}>Copyright @ Parasme IT Solutions Pvt. Ltd. 2024</div></div></div></div></div>
+                  <div style={{ fontSize: '14px', lineHeight: '130%',fontWeight:600 }}>Copyright @ Parasme IT Solutions Pvt. Ltd. 2024</div></div></div></div></div>
         </footer>
       </div>
     </div>
