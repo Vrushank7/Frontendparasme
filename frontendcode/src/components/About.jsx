@@ -33,117 +33,181 @@ function About() {
     <div style={{paddingTop: '0', paddingLeft: '0', paddingRight: '0',marginBottom: '8rem' }}></div>
     </header>
 
-<div style={{ position: 'relative', width: '100%', margin: '0 auto',marginBottom: '40px' }}>
-<h2 style={{ fontWeight: '600', marginBottom: '29px', marginTop: '0', color: 'orangered', fontSize: '45px', paddingLeft: '270px', paddingRight: '270px' }}>Meet our team</h2>
-
-
-<div style={{ display: 'flex', animation: 'slide 34s linear infinite', paddingLeft: '0', whiteSpace: 'nowrap' }}>
-  
- 
-  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-      <img src={bmani} alt="B. Mani" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
+    <div  className="about-container">
+      <h2 className="team-header">Meet our team</h2>
+      <div className="team-slider">
+        <div className="team-member">
+          <div className="team-image-container">
+            <img src={bmani} alt="B. Mani" className="team-image" />
+          </div>
+          <div className="team-name">B. Mani</div>
+          <div className="team-role">Managing Director</div>
+        </div>
+        <div className="team-member">
+          <div className="team-image-container">
+            <img src={sachin} alt="Sachin Verma" className="team-image" />
+          </div>
+          <div className="team-name">Sachin Verma</div>
+          <div className="team-role">Chief Product Officer</div>
+        </div>
+        <div className="team-member">
+          <div className="team-image-container">
+            <img src={preethi} alt="Preeti Verma" className="team-image" />
+          </div>
+          <div className="team-name">Preeti Verma</div>
+          <div className="team-role">Sr. Manager - Operations</div>
+        </div>
+        <div className="team-member">
+          <div className="team-image-container">
+            <img src={sheeth} alt="Sheetal Panigrahi" className="team-image" />
+          </div>
+          <div className="team-name">Sheetal Panigrahi</div>
+          <div className="team-role">Sr. Manager - Database</div>
+        </div>
+        <div className="team-member"  style={{  marginRight: '170px' }}>
+          <div className="team-image-container">
+            <img src={rishab} alt="Rishab Jain" className="team-image" />
+          </div>
+          <div className="team-name">Rishab Jain</div>
+          <div className="team-role">Manager - Application</div>
+        </div>
+        <div className="team-member">
+          <div className="team-image-container">
+            <img src={bmani} alt="B. Mani" className="team-image" />
+          </div>
+          <div className="team-name">B. Mani</div>
+          <div className="team-role">Managing Director</div>
+        </div>
+        <div className="team-member">
+          <div className="team-image-container">
+            <img src={sachin} alt="Sachin Verma" className="team-image" />
+          </div>
+          <div className="team-name">Sachin Verma</div>
+          <div className="team-role">Chief Product Officer</div>
+        </div>
+        <div className="team-member">
+          <div className="team-image-container">
+            <img src={preethi} alt="Preeti Verma" className="team-image" />
+          </div>
+          <div className="team-name">Preeti Verma</div>
+          <div className="team-role">Sr. Manager - Operations</div>
+        </div>
+        <div className="team-member">
+          <div className="team-image-container">
+            <img src={sheeth} alt="Sheetal Panigrahi" className="team-image" />
+          </div>
+          <div className="team-name">Sheetal Panigrahi</div>
+          <div className="team-role">Sr. Manager - Database</div>
+        </div>
+        <div className="team-member" >
+          <div className="team-image-container">
+            <img src={rishab} alt="Rishab Jain" className="team-image" />
+          </div>
+          <div className="team-name">Rishab Jain</div>
+          <div className="team-role">Manager - Application</div>
+        </div>
+      </div>
     </div>
-    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>B. Mani</div>
-    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Managing Director</div>
-  </div>
+    <style jsx>{`
+        .about-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 90px;
+  margin-top: 160px;
+}
 
-  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-      <img src={sachin} alt="Sachin Verma" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
-    </div>
-    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Sachin Verma</div>
-    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Chief Product Officer</div>
-  </div>
+.team-header {
+  font-weight: 600;
+  margin-bottom: 29px;
+  margin-top: 0;
+  color: orangered;
+  font-size: 45px;
+  padding-left: 270px;
+  padding-right: 270px;
+}
 
-  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-      <img src={preethi} alt="Preeti Verma" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
-    </div>
-    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Preeti Verma</div>
-    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Sr. Manager - Operations</div>
-  </div>
+.team-slider {
+  display: flex;
+  animation: slide 34s linear infinite;
+  padding-left: 0;
+  white-space: nowrap;
+}
 
-  
-  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-      <img src={sheeth} alt="Sheetal Panigrahi" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
-    </div>
-    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Sheetal Panigrahi</div>
-    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Sr. Manager - Database</div>
-  </div>
-  
-  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '170px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-      <img src={rishab} alt="Rishab Jain" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
-    </div>
-    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Rishab Jain</div>
-    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Manager - Application</div>
-  </div>
+.team-member {
+  display: inline-block;
+  background-color: white;
+  margin-right: 40px;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
 
-  
-  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-      <img src={bmani} alt="B. Mani" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
-    </div>
-    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>B. Mani</div>
-    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Managing Director</div>
-  </div>
+.team-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
-  <div style={{ display: 'inline-block', backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-      <img src={sachin} alt="Sachin Verma" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
-    </div>
-    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Sachin Verma</div>
-    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Chief Product Officer</div>
-  </div>
+.team-image {
+  max-width: 272px;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 6px;
+  background-color: lightpink;
+}
 
-  <div style={{ backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-      <img src={preethi} alt="Preeti Verma" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
-    </div>
-    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Preeti Verma</div>
-    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Sr. Manager - Operations</div>
-  </div>
+.team-name {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #404040;
+}
 
-  
-  <div style={{ backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-      <img src={sheeth} alt="Sheetal Panigrahi" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
-    </div>
-    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Sheetal Panigrahi</div>
-    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Sr. Manager - Database</div>
-  </div>
+.team-role {
+  color: #525252;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
 
-  <div style={{ backgroundColor: 'white', marginRight: '40px', borderRadius: '10px', padding: '20px', textAlign: 'center', width: '220px', transition: 'transform 0.3s ease' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-      <img src={rishab} alt="Rishab Jain" style={{ maxWidth: '272px', maxHeight: '280px', objectFit: 'cover', borderRadius: '6px', backgroundColor: 'lightpink' }} />
-    </div>
-    <div style={{ marginTop: '15px', fontWeight: 'bold', fontSize: '18px', color: '#404040' }}>Rishab Jain</div>
-    <div style={{ color: '#525252', fontSize: '14px', fontWeight: '500', lineHeight: '20px' }}>Manager - Application</div>
-  </div>
+@media (max-width: 768px) {
 
-
-
-</div>
-
-  
-</div>
-
-
-<style>{`
-  @keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-106%); } 
+  .team-header {
+    font-size: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-    
-`}</style>
+
+  .team-slider {
+    display: flex;
+    padding-left: 0;
+    white-space: normal;
+  }
+
+  .team-member {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+     margin-right: -15px;
+     margin-left: -15px;
+  }
+
+  .team-image {
+    max-width: 148.5px;
+    max-height: 250px;
+  }
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-106%); }
+}
+      `}</style>
 <Footer />
-
 </div>
-
-
-
   );
 }
 
