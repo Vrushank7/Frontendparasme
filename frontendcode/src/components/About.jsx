@@ -191,13 +191,12 @@ function About() {
   .team-member {
     flex: 1 1 100%;
     margin-bottom: 20px;
-     margin-right: -15px;
-     margin-left: -15px;
+    min-width: 87px;
   }
 
   .team-image {
-    max-width: 148.5px;
-    max-height: 250px;
+    max-width: 160px;
+    max-height: 200px;
   }
 }
 

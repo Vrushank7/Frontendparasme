@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/parasmelogo.jpg'; 
+import oracle from '../assets/oraclelogo.jpg';
 import { useState, useEffect, useRef } from 'react';
 
 function Navbar() {
@@ -48,16 +49,32 @@ function Navbar() {
 
   return (
     <div className="navbar-container" style={{ position: 'fixed',top: 0,left: 0,width: '100%',display: 'flex',justifyContent: 'space-between',
-      alignItems: 'center',backgroundColor: 'rgba(255, 255, 255, 0.3)',padding: '1rem 2rem',zIndex: 1000,boxSizing: 'border-box'}}>
+      alignItems: 'center',backgroundColor: 'rgba(255, 255, 255, 0.3)',padding: '0.5rem 1rem',zIndex: 1000,boxSizing: 'border-box'}}>
       <Link to="/" style={{fontSize: '2rem',fontWeight: 'bold',color: 'orangered',textDecoration: 'none'}}>
         <img src={logo} alt="Parasme Logo" style={{ height: '60px',width: 'auto'}} />
       </Link>
+      <div className="mobile-menu-container" style={{ display: 'flex', alignItems: 'center' }}>
+      <img
+        src={oracle}
+        alt="Oracle Logo"
+        style={{
+          height: '75px',
+          width: 'auto',
+           display: 'none',
+         
+          marginLeft: '0.5rem',
+          '@media (max-width: 768px)': { display: 'block' },
+        }}
+      />
       <button className="mobile-menu-button" onClick={toggleMobileMenu}
         style={{ display: 'none',background: 'none',border: 'none',cursor: 'pointer',padding: '10px','@media (max-width: 768px)': {display: 'block'}}}>
         <div style={{width: '25px',height: '3px',backgroundColor: 'black',margin: '5px 0',transition: 'all 0.3s ease'}}></div>
         <div style={{width: '25px',height: '3px',backgroundColor: 'black',margin: '5px 0',transition: 'all 0.3s ease'}}></div>
         <div style={{width: '25px',height: '3px',backgroundColor: 'black',margin: '5px 0',transition: 'all 0.3s ease'}}></div>
       </button>
+     
+    </div>
+      
       <nav className="desktop-nav" style={{display: 'flex',alignItems: 'center','@media (max-width: 768px)': {display: 'none'}}}>
         <ul style={{ listStyle: 'none',display: 'flex',gap: '1.5rem',margin: 0,paddingRight: '1rem'}}>
           <li style={{ position: 'relative' }}>
@@ -96,9 +113,13 @@ function Navbar() {
             )}
           </li>
         </ul>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0rem' }}>
         <a href="https://cal.com/parasme/30min?date=2024-07-12&month=2024-07" style={{
           backgroundColor: 'orangered',color: 'white',padding: '0.5rem 1rem',border: 'none',textDecoration: 'none',borderRadius: '5px',
-          marginLeft: '1rem',whiteSpace: 'nowrap',boxSizing: 'border-box',fontSize: '1.1rem'}}>Book A Demo</a></nav>
+          marginLeft: '1rem',whiteSpace: 'nowrap',boxSizing: 'border-box',fontSize: '1.1rem'}}>Book A Demo</a>
+          <img src={oracle} alt="Oracle Logo" style={{ height: '100px', width: 'auto', marginLeft: '0rem' }} />
+           </div>
+          </nav>
 
       
       {isMobileMenuOpen && (
@@ -166,6 +187,10 @@ function Navbar() {
             }
             .desktop-nav {
               display: none !important;
+            }
+
+            .mobile-menu-container img {
+              display: block !important;
             }
             .mobile-nav {
               display: block !important;

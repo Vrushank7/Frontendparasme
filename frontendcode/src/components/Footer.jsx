@@ -44,7 +44,7 @@ function Footer() {
                   </div>
                 </div>
               </div>
-              <div style={{ backgroundColor: '#13131333', width: '100%', height: '1px', marginTop: '64px', marginBottom: '32px' }}></div>
+              <div style={{ backgroundColor: '#13131333', width: '110%', height: '1px', marginTop: '64px', marginBottom: '32px', marginLeft: '-5%', marginRight: '-5%' }}></div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div style={{ fontSize: '14px', lineHeight: '130%', fontWeight: 600 }}>Copyright @ Parasme IT Solutions Pvt. Ltd. 2024</div>
               </div>

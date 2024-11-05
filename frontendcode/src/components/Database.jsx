@@ -39,7 +39,7 @@ function Database() {
               <div style={{ marginBottom: "8px" }}>
                 <div style={{ color: "black", textAlign: "center", fontSize: "24px", fontWeight: "700", lineHeight: "32px", letterSpacing: "-0.02em" }}>Availability</div>
               </div>
-              <p style={{ textAlign: "center", fontSize: "14px", letterSpacing: "-0.01em", marginBottom: "-9px", lineHeight: "1.8", color: "#666" }}>Host monitoring<br />Database monitoring<br />Tablespace management<br />Partition management<br />Statistics gathering<br />Housekeeping</p>
+              <p style={{ textAlign: "center", fontSize: "14px", letterSpacing: "-0.01em", marginBottom: "-25px", lineHeight: "1.8", color: "#666" }}>Host monitoring<br />Database monitoring<br />Tablespace management<br />Partition management<br />Statistics gathering<br />Housekeeping</p>
             </div>           
             <div style={{ backgroundColor: "#f3f5fb", width: "1px", height: "200px", marginLeft: "40px", marginRight: "40px" }}></div>         
             <div style={{ display: "grid", gridColumnGap: "16px", gridRowGap: "16px", placeItems: "center" }}>
@@ -49,7 +49,7 @@ function Database() {
               <div style={{ marginBottom: "8px" }}>
                 <div style={{ color: "black", textAlign: "center", fontSize: "24px", fontWeight: "700", lineHeight: "32px", letterSpacing: "-0.02em" }}>Protection</div>
               </div>
-              <p style={{ textAlign: "center", fontSize: "14px", letterSpacing: "-0.01em", lineHeight: "1.8", color: "#666" }}>Database Backup<br />Standby Database Syncing<br />Account Unlocking<br />Password Reset<br />Disaster Recovery Drill</p>
+              <p style={{ textAlign: "center", fontSize: "14px", letterSpacing: "-0.01em", lineHeight: "1.8", marginBottom: "0",color: "#666" }}>Database Backup<br />Standby Database Syncing<br />Account Unlocking<br />Password Reset<br />Disaster Recovery Drill</p>
             </div>
             <div style={{ backgroundColor: "#f3f5fb", width: "1px", height: "200px", marginLeft: "40px", marginRight: "40px" }}></div>
             <div style={{ display: "grid", gridColumnGap: "16px", gridRowGap: "16px", textAlign: "center" }}>
@@ -73,7 +73,7 @@ function Database() {
               <p style={{ textAlign: "center", fontSize: "14px", lineHeight: "1.8", marginBottom: "0", letterSpacing: "-0.01em", color: "#666" }}>RDBMS Installation<br />Database Provisioning<br />Quarterly CPU Patching<br />Database Upgrade<br />Database Refresh & Cloning<br />Custom SQL Execution</p>
             </div>
             <div style={{ backgroundColor: "#f3f5fb", width: "1px", height: "200px", marginLeft: "40px", marginRight: "40px" }}></div>
-            <div style={{ display: "grid", gridColumnGap: "16px", gridRowGap: "16px", placeItems: "center", gridTemplateRows: "auto", gridTemplateColumns: "1fr", gridAutoColumns: "1fr" }}>
+            <div style={{ display: "grid", gridColumnGap: "16px", gridRowGap: "16px", placeItems: "center", gridTemplateRows: "auto auto", gridTemplateColumns: "1fr", gridAutoColumns: "1fr" }}>
               <div style={{ backgroundColor: "orangered", textAlign: "center", borderRadius: "8px", justifyContent: "center", alignItems: "center", width: "37px", height: "37px", marginBottom: "32px", padding: "16px", display: "flex" }}>
                 <img src={trou} loading="lazy" width="40" alt="" />
               </div>

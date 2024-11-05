@@ -457,8 +457,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="why-parasme-feature-row why-parasme-feature-row-center">
-        <div className="why-parasme-feature-card">
+      <div className="why-parasme-feature-row why-parasme-feature-row-center" >
+        <div className="why-parasme-feature-card" >
           <div className="feature-icon">
             <img src={int} alt="Integration" />
           </div>
@@ -506,8 +506,8 @@ function Home() {
 
         .why-parasme-feature-card {
           background-color: white;
-          width: 28%;
-          padding: 3rem 2rem;
+          width: 29.5%;
+          padding: 3rem 1rem;
           text-align: center;
         }
 
@@ -538,7 +538,7 @@ function Home() {
           }
 
           .why-parasme-feature-card {
-            width: 90%;
+            width: 95%;
           }
 
           .why-parasme-title {
@@ -898,18 +898,19 @@ function Home() {
     display: flex;
     padding-left: 0;
     white-space: normal;
+     animation: slide 20s linear infinite;
   }
 
   .team-member {
     flex: 1 1 100%;
     margin-bottom: 20px;
-     margin-right: -15px;
-     margin-left: -15px;
+   
+      min-width: 87px;
   }
 
   .team-image {
-    max-width: 148.5px;
-    max-height: 250px;
+    max-width: 160px;
+    max-height: 200px;
   }
 }
 
@@ -1054,7 +1055,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <div style={{ backgroundColor: '#13131333', width: '100%', height: '1px', marginTop: '64px', marginBottom: '32px' }}></div>
+          <div style={{ backgroundColor: '#13131333', width: '110%', height: '1px', marginTop: '64px', marginBottom: '32px', marginLeft: '-5%', marginRight: '-5%' }}></div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div style={{ fontSize: '14px', lineHeight: '130%', fontWeight: 600 }}>Copyright @ Parasme IT Solutions Pvt. Ltd. 2024</div>
           </div>
@@ -1065,23 +1066,22 @@ function Home() {
   <style jsx>{`
     @media (max-width: 768px) {
        .footer-content {
-        flex-direction: column;
-        align-items: center;
-      }
-      .footer-logo {
-        margin-bottom: 90px;
-      }
-      .footer-links {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        flex-wrap: wrap;
-      }
-      .footer-links > div {
-        flex: 1 1 100%; 
-        margin-bottom: 16px;
-      }
-    
+            flex-direction: column;
+            align-items: center;
+          }
+          .footer-logo {
+            margin-bottom: 90px;
+          }
+          .footer-links {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+          }
+          .footer-links > div {
+            flex: 1 1 100%; 
+            margin-bottom: 16px;
+          }
     }
   `}</style>
 </div>  

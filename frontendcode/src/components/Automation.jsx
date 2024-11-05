@@ -38,7 +38,7 @@ function Automation() {
               <div style={{ marginBottom: "8px" }}>
                 <div style={{ color: "black", textAlign: "center", fontSize: "24px", fontWeight: "700", lineHeight: "32px", letterSpacing: "-0.02em" }}>Availability</div>
               </div>
-              <p style={{ textAlign: "center", fontSize: "14px", letterSpacing: "-0.01em", marginBottom: "-9px", lineHeight: "1.8", color: "#666" }}>Host monitoring<br />Database monitoring<br />Tablespace management<br />Partition management<br />Statistics gathering<br />Housekeeping</p>
+              <p style={{ textAlign: "center", fontSize: "14px", letterSpacing: "-0.01em", lineHeight: "1.8", color: "#666", marginBottom: "-25px" }}>Host monitoring<br />Database monitoring<br />Tablespace management<br />Partition management<br />Statistics gathering<br />Housekeeping</p>
             </div>
             <div style={{ backgroundColor: "#f3f5fb", width: "1px", height: "200px", marginLeft: "40px", marginRight: "40px" }}></div>
             <div style={{ display: "grid", gridColumnGap: "16px", gridRowGap: "16px", placeItems: "center" }}>
@@ -48,7 +48,7 @@ function Automation() {
               <div style={{ marginBottom: "8px" }}>
                 <div style={{ color: "black", textAlign: "center", fontSize: "24px", fontWeight: "700", lineHeight: "32px", letterSpacing: "-0.02em" }}>Protection</div>
               </div>
-              <p style={{ textAlign: "center", fontSize: "14px", letterSpacing: "-0.01em", lineHeight: "1.8", color: "#666" }}>Database Backup<br />Standby Database Syncing<br />Account Unlocking<br />Password Reset<br />Disaster Recovery Drill</p>
+              <p style={{ textAlign: "center", fontSize: "14px", letterSpacing: "-0.01em", lineHeight: "1.8", color: "#666", marginBottom: "0" }}>Database Backup<br />Standby Database Syncing<br />Account Unlocking<br />Password Reset<br />Disaster Recovery Drill</p>
             </div>
             <div style={{ backgroundColor: "#f3f5fb", width: "1px", height: "200px", marginLeft: "40px", marginRight: "40px" }}></div>
             <div style={{ display: "grid", gridColumnGap: "16px", gridRowGap: "16px", textAlign: "center" }}>
