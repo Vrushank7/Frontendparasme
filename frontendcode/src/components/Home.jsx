@@ -932,7 +932,7 @@ function Home() {
           <p style={{ letterSpacing: '-.02em', marginBottom: '0', fontSize: '20px', lineHeight: '32px', color: '#666' }}>Please share your details and we will reach out!</p>
         </div>
         <div style={{ margin: '0 0 15px' }}>
-          <form id="wf-form-Contact-Form-3" name="wf-form-Contact-Form-3" method="get" style={{ display: 'flex', flexDirection: 'column' }}
+        <form id="wf-form-Contact-Form-3" name="wf-form-Contact-Form-3" method="get" style={{ display: 'flex', flexDirection: 'column' }}
             onSubmit={(e) => {
               e.preventDefault();
               document.getElementById('form-success-message').style.display = 'none';
